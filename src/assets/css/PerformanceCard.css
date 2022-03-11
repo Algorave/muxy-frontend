@@ -20,8 +20,8 @@
 
 button, input[type=submit] {
     background: transparent;
-    border: 2px solid #ff7777;
-    color: #ff7777;
+    border: 2px solid #cc0;
+    color: #cc0;
     font-size: 90%;
     width: auto;
 }

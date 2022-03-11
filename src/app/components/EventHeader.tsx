@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import logo from "../../assets/images/longestnight-sunset-2.0.svg";
+import logo from "../../assets/images/algorave-yellow.svg";
 import { MuxyEvent } from "../types";
 import { DateTime } from "luxon";
 import ProgressBar from "@ramonak/react-progress-bar";
@@ -31,14 +31,14 @@ function EventHeader({event, reservedStreamCount, totalStreamCount}:Props): Reac
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h4>Tidal Club Presents ...</h4>
-            <h1>The Longest Night</h1>
+            <h4>worldwide solstice stream</h4>
+            <h1>Algorave 10th Birthday Party</h1>
             <h2> {event && DateTime.fromISO(event.starts_at).toFormat("dd. LLLL HH:mm")} - {event && DateTime.fromISO(event.ends_at).toFormat("dd. LLLL HH:mm")} {event && DateTime.fromISO(event.starts_at).toFormat("yyyy")}</h2>
             <hr/>
 
             <ProgressBar
                 className="wrapper"
-                bgColor={"#ffce96"}
+                bgColor={"#777"}
                 baseBgColor={"#bbbbbb54"}
                 labelClassName="label"
                 labelAlignment={"outside"}

@@ -52,7 +52,7 @@ const PerformanceCard = ({
   return (
     <div className="card">
       <div className="card-body">
-        <p className="card-header">Cycle #{cycleNo}</p>
+        <p className="card-header">Slot #{cycleNo}</p>
         <p className="card-time">
           {startsAtHs}-{endsAtHs}{" "}
           {!inCreateMode && !text && (
