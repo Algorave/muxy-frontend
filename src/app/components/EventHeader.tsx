@@ -31,7 +31,7 @@ function EventHeader({event, reservedStreamCount, totalStreamCount}:Props): Reac
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h4>worldwide solstice stream</h4>
+            <h4>worldwide equinox stream</h4>
             <h1>Algorave 10th Birthday Party</h1>
             <h2> {event && DateTime.fromISO(event.starts_at).toFormat("dd. LLLL HH:mm")} - {event && DateTime.fromISO(event.ends_at).toFormat("dd. LLLL HH:mm")} {event && DateTime.fromISO(event.starts_at).toFormat("yyyy")}</h2>
             <hr/>
@@ -51,8 +51,8 @@ function EventHeader({event, reservedStreamCount, totalStreamCount}:Props): Reac
 
             <hr/>
             <p>Your timezone: {Intl.DateTimeFormat().resolvedOptions().timeZone}</p>
-            <p className="link-paragraph"><a href={"https://www.youtube.com/eulerroom/live"}>https://www.youtube.com/eulerroom/live</a></p>
-            <p className="link-paragraph"><a href={"https://www.twitch.tv/eulerroom"}>https://www.twitch.tv/eulerroom</a></p>
+            <p>This March in 2022, algorave is ten years old. Lets try to fill a whole day with ten minute live streams, of live coded and other algorithmic performances. <br />Beginners and old timers are all welcome to stream. <br />Grab your performance slot below, you will then be sent a stream key for use with the (free) <a href="https://ten.algorave.com">OBS streaming software</a>, along with further instructions.</p>
+            <p className="link-paragraph">The event will be streamed exclusively to <a href="https://live.eulerroom.com/">live.eulerroom.com</a></p>
         </header>
     );
 }
