@@ -30,7 +30,16 @@ function EventHeader({event, reservedStreamCount, totalStreamCount}:Props): Reac
 
     return (
         <header className="App-header">
+            <div id="havewegotavideo">
+            <video autoPlay loop muted controls>
+            <source src="vids/scaled.mp4" type="video/mp4" />
+            </video>
             <img src={logo} className="App-logo" alt="logo" />
+            <video autoPlay loop muted controls>
+            <source src="vids/scaled.mp4" type="video/mp4" />
+            </video>
+            </div>
+
             <h4>worldwide equinox stream</h4>
             <h1>Algorave 10th Birthday Party</h1>
             <h2> {event && DateTime.fromISO(event.starts_at).toFormat("dd. LLLL HH:mm")} - {event && DateTime.fromISO(event.ends_at).toFormat("dd. LLLL HH:mm")} {event && DateTime.fromISO(event.starts_at).toFormat("yyyy")}</h2>
