@@ -56,12 +56,15 @@ const PerformanceCard = ({
         <p className="card-time">
           {startsAtHs}-{endsAtHs}{" "}
           {!inCreateMode && !text && (
+          <>
+          <p className="card-text">- free slot -</p>
             <button
               className="card-button-plus"
               onClick={() => setInCreateMode(true)}
             >
               +
             </button>
+          </>
           )}
         </p>
         {removed && <p>You have removed your slot succesfully.</p>}
