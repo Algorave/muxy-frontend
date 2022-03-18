@@ -76,15 +76,7 @@ input {
 }
 
 .App-logo {
-  height: 30vmin;
-  pointer-events: none;
-  vertical-align: top;
-  display: inline;
-  margin: 0 3vmin;
-}
-
-video {
-  height: 30vmin;
+  height: 40vmin;
   pointer-events: none;
 }
 
