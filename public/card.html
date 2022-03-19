@@ -1,0 +1,65 @@
+<html>
+  <body>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Source+Code+Pro&display=swap" rel="stylesheet">
+<style>
+  body {
+      font-family: 'Source Code Pro', monospace;
+  }
+  div#listing {
+      max-width: 45em;
+      margin: auto;
+      border: 3px solid #000;
+      padding: 2em;
+  }
+ </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+<script>
+  var getJSON = function(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.responseType = 'json';
+      xhr.setRequestHeader('Authorization','Api-Key S4b965QU.UuQmHexKmvXjVlFtOSUCWqxDNblqgHaq');  
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+  };
+
+  $(document).ready(function() {
+      getJSON('https://muxy.tidalcycles.org/streams/?event__slug=algo10&format=json',
+	      function(err, data) {
+		  if (err !== null) {
+		      console.log('Something went wrong: ' + err);
+		  } else {
+		      console.log('Count: ' + data.count);
+		      var c = $("div#listing");
+		      console.log(c);
+		      var first = 1;
+		      $.each(data.results,function(key,value){
+			  if (first != 1) {
+			      c.append(" // ");
+			  }
+			  c.append(value["publisher_name"]);
+			  first = 0;
+		      });
+		  }
+	      });
+  })
+	    
+
+</script>
+<div id="listing">
+  <h1>ALGORAVE TENTH BIRTHDAY STREAM</h1>
+  <p>144 performances over 24 hours around the equinox<br />
+    Join live from 21:00 19th March 2022 UTC via <a href="https://ten.algorave.com">ten.algorave.com</a></p>
+  10 minute performances by
+ </div>
+  </body>
+</html>
